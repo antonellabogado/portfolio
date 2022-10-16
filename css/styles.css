@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+section {
+    height: 100vh;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Displays */
+.d-flex {
+    display: flex;
+}
+
+/* Nav */
+.nav {
+    justify-content: flex-end;
+    padding: 20px 30px 10px 10px;
+}
+
+.nav-item {
+    margin: 10px;
+}
+
+/* Header */
+.header {
+    height: 100vh;
+    padding: 110px;
+}
+
+.header > div {
+    width: 50%;
+}
+
+.nombre {
+    border-right: thin solid #fff;
+    height: 350px;
+}
+
+.rrss {
+    padding-left: 30px;
+}
+
+.rrss h2 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.rrss ul {
+    margin-top: 50px;
+}
+
+.rrss ul li {
+    margin-right: 10px;
+}
+
+/* Sobre Mi */
+section > div {
+    height: 12%;
+    align-items: center;
+}
+
+section > div h2 {
+    margin-left: 20px;
+}
+
+.sobre-mi {
+    background-color: #ff76b8;
+    color: #000;
+}
+
+.cv div {
+    width: 50%;
+}
+
+/* Proyectos */
+.proyectos {
+    background-color: #4444ff;
+    color: #000;
+}
+
+.proyectos-container {
+    height: calc(100vh - 12%);
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.proyectos-container div {
+    border-left: thin solid #fff;
+    border-right: thin solid #fff;
+    width: 33.3%;
+}
+
+.proyecto {
+    margin: 15px 0;
+    padding: 20px;
+}
+
+.proyecto h3 {
+    padding: 10px 0;
+}
+
+.proyecto p {
+    margin-top: 10px;
+}
+.proyecto a {
+    text-decoration: underline;
+}
+
+.proyecto .tec-usadas {
+    color: #4444ff;
+}
+
+/* Contacto */
+.contacto {
+    background-color: #58fc42;
+    color: #000;
+}
