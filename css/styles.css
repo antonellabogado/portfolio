@@ -19,6 +19,10 @@ section {
     height: 100vh;
 }
 
+section > div h2 {
+    margin-left: 20px;
+}
+
 h1 {
     font-size: 5rem;
 }
@@ -41,6 +45,11 @@ a {
     display: flex;
 }
 
+.d-grid {
+    display: grid;
+    grid-template-rows: 2fr 8fr 0.5fr;
+}
+
 /* Nav */
 .nav {
     justify-content: flex-end;
@@ -49,6 +58,19 @@ a {
 
 .nav-item {
     margin: 10px;
+    text-align: center;
+}
+
+#nav-sobremi:hover {
+    color: #ff76b8;
+}
+
+#nav-proyectos:hover {
+    color: #4444ff;
+}
+
+#nav-contacto:hover {
+    color: #75fc63;
 }
 
 /* Header */
@@ -84,45 +106,64 @@ a {
 }
 
 /* Sobre Mi */
-section > div {
-    height: 12%;
+#sobre-mi {
+    grid-template-areas: "titulo titulo"
+                         "resumen tecnologias";
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.titulo {
+    grid-area: titulo;
+    background-color: #ff76b8;
+    color: #000;
     align-items: center;
 }
 
-section > div h2 {
-    margin-left: 20px;
+.resumen {
+    grid-area: resumen;
+    padding: 200px 20px;
 }
 
-.sobre-mi {
-    background-color: #ff76b8;
-    color: #000;
+.resumen h3 {
+    margin-top: 20px;
 }
 
-.cv div {
-    width: 50%;
+.resumen h3 a {
+    color: #ff76b8;
+}
+
+.tecnologias {
+    grid-area: tecnologias;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 80px;
+    padding: 200px 0;
 }
 
 /* Proyectos */
-.proyectos {
+#proyectos {
+    grid-template-areas: "titulo"
+                         "proyectos";
+}
+
+#proyectos .titulo {
     background-color: #4444ff;
-    color: #000;
 }
 
 .proyectos-container {
-    height: calc(100vh - 12%);
+    grid-area: proyectos;
     justify-content: space-evenly;
     align-items: stretch;
-}
-
-.proyectos-container div {
-    border-left: thin solid #fff;
-    border-right: thin solid #fff;
-    width: 33.3%;
 }
 
 .proyecto {
     margin: 15px 0;
     padding: 20px;
+    width: 33.3%;
+}
+
+.proyecto:not(:last-child) {
+    border-inline-end: solid 1px rgb(151, 151, 151);
 }
 
 .proyecto h3 {
@@ -132,6 +173,7 @@ section > div h2 {
 .proyecto p {
     margin-top: 10px;
 }
+
 .proyecto a {
     text-decoration: underline;
 }
@@ -141,7 +183,51 @@ section > div h2 {
 }
 
 /* Contacto */
-.contacto {
-    background-color: #58fc42;
-    color: #000;
+#contacto {
+    grid-template-areas: "titulo titulo"
+                         "formulario medios-contacto";
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#contacto .titulo {
+    background-color: #75fc63;
+}
+
+.form {
+    grid-area: formulario;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.form input {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    height: 80px;
+}
+
+.form input[type=text], .form input[type=email] {
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #75fc63;
+}
+
+.medios-contacto {
+    grid-area: medios-contacto;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.medios-contacto p, .medios-contacto ul li a {
+    font-size: larger;
+}
+
+.medios-contacto ul li a:hover {
+    color: #75fc63;
 }
